@@ -1,4 +1,4 @@
-package com.cherryoverboard.spring.hazelcast.embedded;
+package com.cherryoverboard.spring.hazelcast;
 
 public final class Constants {
 

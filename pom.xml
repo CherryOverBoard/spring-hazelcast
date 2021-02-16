@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.cherryoverboard</groupId>
-    <artifactId>spring-hazelcast-embedded</artifactId>
+    <artifactId>spring-hazelcast</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

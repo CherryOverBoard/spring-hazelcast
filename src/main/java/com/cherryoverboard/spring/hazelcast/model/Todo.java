@@ -1,4 +1,4 @@
-package com.cherryoverboard.spring.hazelcast.embedded.model;
+package com.cherryoverboard.spring.hazelcast.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

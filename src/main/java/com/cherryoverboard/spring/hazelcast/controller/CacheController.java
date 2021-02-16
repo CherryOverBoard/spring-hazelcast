@@ -1,16 +1,14 @@
-package com.cherryoverboard.spring.hazelcast.embedded.controller;
+package com.cherryoverboard.spring.hazelcast.controller;
 
-import com.cherryoverboard.spring.hazelcast.embedded.model.Todo;
+import com.cherryoverboard.spring.hazelcast.Constants;
+import com.cherryoverboard.spring.hazelcast.model.Todo;
 import com.hazelcast.core.HazelcastInstance;
-import com.hazelcast.internal.json.Json;
 import com.hazelcast.map.IMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 import java.util.UUID;
-
-import static com.cherryoverboard.spring.hazelcast.embedded.Constants.TODOS;
 
 @RestController
 @RequestMapping("/api/v1/cache")
@@ -26,14 +24,14 @@ public class CacheController {
     @PostMapping
     public UUID addTodo(@RequestBody Todo request) {
         Todo todo = Todo.from(request);
-        IMap<UUID, Todo> todos = hazelcastInstance.getMap(TODOS);
+        IMap<UUID, Todo> todos = hazelcastInstance.getMap(Constants.TODOS);
         todos.putIfAbsent(todo.getId(), todo);
         return todo.getId();
     }
 
     @GetMapping("{id}")
     public Optional<Todo> getTodo(@PathVariable("id") UUID id) {
-        IMap<UUID, Todo> todos = hazelcastInstance.getMap(TODOS);
+        IMap<UUID, Todo> todos = hazelcastInstance.getMap(Constants.TODOS);
         return Optional.ofNullable(todos.get(id));
     }
 }

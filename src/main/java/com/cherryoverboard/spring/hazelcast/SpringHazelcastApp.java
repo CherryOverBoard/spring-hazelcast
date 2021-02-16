@@ -1,4 +1,4 @@
-package com.cherryoverboard.spring.hazelcast.embedded;
+package com.cherryoverboard.spring.hazelcast;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,6 +1,6 @@
-package com.cherryoverboard.spring.hazelcast.embedded.serialization;
+package com.cherryoverboard.spring.hazelcast.serialization;
 
-import com.cherryoverboard.spring.hazelcast.embedded.model.Todo;
+import com.cherryoverboard.spring.hazelcast.model.Todo;
 import com.hazelcast.nio.ObjectDataInput;
 import com.hazelcast.nio.ObjectDataOutput;
 import com.hazelcast.nio.serialization.StreamSerializer;

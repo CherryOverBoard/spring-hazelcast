@@ -1,18 +1,17 @@
-package com.cherryoverboard.spring.hazelcast.embedded.config;
+package com.cherryoverboard.spring.hazelcast.config;
 
-import com.cherryoverboard.spring.hazelcast.embedded.model.Todo;
-import com.cherryoverboard.spring.hazelcast.embedded.serialization.TodoSerializer;
+import com.cherryoverboard.spring.hazelcast.model.Todo;
+import com.cherryoverboard.spring.hazelcast.serialization.TodoSerializer;
 import com.hazelcast.config.Config;
 import com.hazelcast.config.MapConfig;
 import com.hazelcast.config.SerializerConfig;
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
-import com.hazelcast.nio.serialization.Serializer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import static com.cherryoverboard.spring.hazelcast.embedded.Constants.TODOS;
+import static com.cherryoverboard.spring.hazelcast.Constants.TODOS;
 
 @Configuration
 public class CacheConfig {
