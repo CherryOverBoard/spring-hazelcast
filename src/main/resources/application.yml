@@ -1,0 +1,5 @@
+server:
+  port: 8081
+cache:
+  max-ttl: 0  #infinite
+  max-idle: 0 #infinite
